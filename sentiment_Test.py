@@ -5,12 +5,10 @@ API_URL = "https://api-inference.huggingface.co/models/nlptown/bert-base-multili
 
 # List of API tokens
 api_tokens = [
-    "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",
-    "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",
-    "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",
-    "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",
-    "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",
-    "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"
+    "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",
+    "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",
+    "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",
+    "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"
 ]
 
 # Initialize token index
@@ -78,6 +76,6 @@ def process_reviews_from_csv(input_filename, output_filename):
         writer.writerows(reviews)
 
 # Example usage
-input_csv_filename = 'scrape_data.csv'
-output_csv_filename = 'scrape_data2.csv'
+input_csv_filename = 'abcoffee_scrape_data.csv'
+output_csv_filename = 'abcoffee_scrape_data2.csv'
 process_reviews_from_csv(input_csv_filename, output_csv_filename)
