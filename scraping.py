@@ -80,7 +80,7 @@ def scrape_data(url):
     dates = driver.find_elements(By.CLASS_NAME, "time-stamp")
     
     # Open the CSV file in write mode with newline='' to prevent extra newline characters
-    with open('C:/Users/HARGUN/Desktop/scrape_data.csv', mode='a', newline='', encoding='utf-8') as file:
+    with open('C:/Users/HARGUN/Desktop/hackniche/scrape_data.csv', mode='a', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
         
         # Write headers if the file is empty
@@ -99,7 +99,7 @@ while True:
 
     # Check if the page exists
     try:
-        WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.CLASS_NAME, "bcCauD")))
+        WebDriverWait(driver, 15).until(EC.visibility_of_element_located((By.CLASS_NAME, "bcCauD")))
         scrape_data(url)
         page_number += 1
     except:
